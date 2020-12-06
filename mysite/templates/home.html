@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    <!-- Banner -->
+    <section id="banner">
+        <div class="inner">
+            <h1>動物園鴨鴨: <span><br />動物園公開資訊搜尋引擎</span></h1>
+            <ul class="actions">
+                <li><a href="./stocks/" class="button alt">進入股票市場</a></li>
+                {% if not request.user.is_authenticated %}
+                    <li><a href="/accounts/login/" class="button alt">註冊/登入</a></li>
+                {%endif%}
+            </ul>
+        </div>
+    </section>
+{% endblock %}

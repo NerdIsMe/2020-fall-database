@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{%load static%}
+<head>
+    <meta charset="utf-8">
+    <title>登入</title>
+    <link rel=stylesheet type="text/css" href="{%static "css/main.css" %}">
+
+</head>
+
+<body>
+    <header id="header">
+        <div class="inner">
+            <a href="/" class="logo">動物園鴨鴨<span style="font-size:15px;">  動物園公開資訊搜尋引擎</span></a>
+        </div>
+    </header>
+
+    <div id="login_form">
+        <form action="" method="POST" > {% csrf_token %}
+            <h2>登入</h2>
+            <table >
+                <tr>
+                    <td><label id = 'username' name='username'>帳號：</label></td>
+                    <td>{{form.user_id}}</td>
+                </tr>
+                <tr>
+                    <td><label id = 'password' name='password'>密碼：</label></td>
+                    <td>{{form.password}}</td>
+                </tr>
+            </table>
+            <a href="/accounts/register/">建立帳戶</a>
+            <input type="submit" id = 'login_button' class = "button alt" name = 'login' value="登入">
+        </form>
+        {% if login_failed %}
+            <p>帳號或密碼錯誤，請重新輸入</p>
+        {% endif %}
+    </div>
+</body>

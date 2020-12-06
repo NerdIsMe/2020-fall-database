@@ -1,0 +1,10 @@
+<script>
+    window.onload = setTimeout(function(){ window.location = "/"; },5000);
+</script>
+{% extends 'base.html'%}
+{% block content %}
+    <div id="logout">
+        <h2>你已成功登出</h2>
+        <h6>5秒後自動回到首頁</h6>
+    </div>
+{% endblock %}
