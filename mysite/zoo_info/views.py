@@ -49,3 +49,10 @@ def register(request):
         new_user = UserCreationForm()
         user_data = RegisterForm()
     return render(request, 'register.html', locals())
+
+def zoo_list(request):
+    zoo_data = Zoo.objects.all()
+    return render(request, 'zoo_info/zoo_list.html', locals())
+    
+
+

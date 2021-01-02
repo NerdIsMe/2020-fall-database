@@ -1,0 +1,22 @@
+{%extends '../base.html' %}
+
+{% block content%}
+<div>
+    <table>
+        <tr>
+            <th>動物園</th>
+            <th>每年遊客人數</th>
+            <th>園區數</th>
+            <th>景點數</th>
+        </tr>
+        {% for i in zoo_data %}
+            <tr>
+                <td>{{i.zoo_id}}</td>
+                <td>{{i.number_of_visitors}}</td>
+                <td>{{i.number_of_categories}}</td>
+                <td>{{i.number_of_sites}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

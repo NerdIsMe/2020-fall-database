@@ -10,12 +10,10 @@ class UserData(models.Model):
 
 
 # Zoo database
-
 # zoo database - strong entity
 class Zoo(models.Model):
     zoo_id = models.CharField(max_length = 30, primary_key = True)
-    atrribute = models.CharField(max_length = 30)
-    number_of_visits = models.IntegerField()
+    number_of_visitors = models.IntegerField()
     number_of_sites = models.IntegerField()
     number_of_categories = models.IntegerField()
     avg_temp = models.FloatField()
@@ -37,17 +35,17 @@ class Habitat(models.Model):
     terrian = models.CharField(max_length = 30)
 
 class Animal(models.Model):
-    scientific_name = models.CharField(max_length = 30, primary_key = True)
-    animal_id = models.CharField(max_length = 30)
+    scientific_id = models.CharField(max_length = 30, primary_key = True)
+    animal_name = models.CharField(max_length = 30)
     category = models.CharField(max_length = 30)
     h_id = models.ForeignKey(Habitat, on_delete = models.CASCADE)
     area_id = models.ForeignKey(Area, on_delete = models.CASCADE)
 
 class IndividualAnimal(models.Model):
-    name = models.CharField(max_length = 30, primary_key = True)
+    idividual_id = models.CharField(max_length = 30, primary_key = True)
     age = models.IntegerField()
     year_in = models.IntegerField()
-    Animal_id = models.ForeignKey(Animal, on_delete = models.CASCADE)
+    animal_id = models.ForeignKey(Animal, on_delete = models.CASCADE)
 
 class Zookeeper(models.Model):
     keeper_id = models.IntegerField()
