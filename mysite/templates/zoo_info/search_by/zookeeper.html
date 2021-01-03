@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load subtract %}
+    <div>
+        <form>
+            <table>
+                <tr>
+                    <td>飼育員名字：</td>
+                    <td><input type="text" required name = 'zookeeper_name'></td>
+                    <td><input type ="submit" value="查詢"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>員工編號</th>
+                <th>姓名</th>
+                <th>年齡</th>
+                <th>開始服務年</th>
+                <th>管區</th>
+            </tr>
+            {% for zookeeper in zookeeper_info%}
+                <tr>
+                    <td>{{zookeeper.keeper_id}}</td>
+                    <td>{{zookeeper.name}}</td>
+                    <td>{{current_year|subtract:zookeeper.birth}}</td>
+                    <td>{{zookeeper.join_time}}</td>
+                    <td>{{zookeeper.department}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock %}

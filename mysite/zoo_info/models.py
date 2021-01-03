@@ -21,11 +21,11 @@ class Zoo(models.Model):
     rain_per_year = models.FloatField()
 
 class Area(models.Model):
-    area_id = models.CharField(max_length = 30, primary_key = True)
-    position = models.CharField(max_length = 30)
-    nearby = models.CharField(max_length = 30)
-    theme = models.CharField(max_length = 30)
-    close_time = models.TimeField()
+    area_id = models.CharField(max_length = 30, primary_key = True)#
+    position = models.CharField(max_length = 30)#
+    nearby = models.CharField(max_length = 30)#
+    theme = models.CharField(max_length = 30)#
+    close_time = models.TimeField()#
     zoo_id = models.ForeignKey(Zoo, on_delete = models.CASCADE)
 
 class Habitat(models.Model):
@@ -48,10 +48,9 @@ class IndividualAnimal(models.Model):
     animal_id = models.ForeignKey(Animal, on_delete = models.CASCADE)
 
 class Zookeeper(models.Model):
-    keeper_id = models.IntegerField()
+    keeper_id = models.IntegerField(primary_key = True)
     name = models.CharField(max_length = 30)
-    experience = models.IntegerField()
+    join_time = models.IntegerField()
     department = models.CharField(max_length = 30)
-    age = models.IntegerField()
-    supervisor = models.CharField(max_length = 30)
+    birth = models.IntegerField()
 

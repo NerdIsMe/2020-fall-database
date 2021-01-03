@@ -24,4 +24,9 @@ urlpatterns = [
     path('accounts/logout/', logout),
     path('accounts/register/', register),
     path('search/zoo/', zoo_list),
+
+    # Search 
+    path('search/', search_menu),
+    path('search/animal', search_animal),
+    path('search/zookeeper', search_zookeeper),
 ]

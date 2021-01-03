@@ -54,5 +54,17 @@ def zoo_list(request):
     zoo_data = Zoo.objects.all()
     return render(request, 'zoo_info/zoo_list.html', locals())
     
+def search_menu(request):
+    return render(request, 'zoo_info/search_menu.html', locals())
 
+def search_animal(request):
+    return render(request, 'zoo_info/search_by/animal.html', locals())
 
+def search_zookeeper(request):
+    current_year = 2021
+    if 'zookeeper_name' in request.GET:
+        zookeeper_name = request.GET['zookeeper_name']
+        zookeeper_info = Zookeeper.objects.filter(name__contains = zookeeper_name)
+    else:
+        zookeeper_info = Zookeeper.objects.all()
+    return render(request, 'zoo_info/search_by/zookeeper.html', locals())
