@@ -29,7 +29,7 @@ class Area(models.Model):
     zoo_id = models.ForeignKey(Zoo, on_delete = models.CASCADE)
 
 class Habitat(models.Model):
-    H_id = models.CharField(max_length = 30)
+    H_id = models.CharField(max_length = 30, primary_key = True)
     weather = models.CharField(max_length = 30)
     continent = models.CharField(max_length = 30)
     terrian = models.CharField(max_length = 30)
@@ -38,6 +38,7 @@ class Animal(models.Model):
     scientific_id = models.CharField(max_length = 30, primary_key = True)
     animal_name = models.CharField(max_length = 30)
     category = models.CharField(max_length = 30)
+    conservation = models.CharField(max_length = 30)
     h_id = models.ForeignKey(Habitat, on_delete = models.CASCADE)
     area_id = models.ForeignKey(Area, on_delete = models.CASCADE)
 

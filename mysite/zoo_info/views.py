@@ -53,7 +53,9 @@ def register(request):
 def zoo_list(request):
     zoo_data = Zoo.objects.all()
     return render(request, 'zoo_info/zoo_list.html', locals())
-    
+
+
+# search
 def search_menu(request):
     return render(request, 'zoo_info/search_menu.html', locals())
 
@@ -68,3 +70,11 @@ def search_zookeeper(request):
     else:
         zookeeper_info = Zookeeper.objects.all()
     return render(request, 'zoo_info/search_by/zookeeper.html', locals())
+
+def search_area(request):
+    if 'area_name' in request.GET:
+        area_name = request.GET['area_name']
+        area_info = Area.objects.filter(theme__contains = area_name)
+    else:
+        area_info = Area.objects.all()
+    return render(request, 'zoo_info/search_by/area.html', locals())

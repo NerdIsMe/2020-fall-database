@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load subtract %}
+    <div>
+        <form>
+            <table>
+                <tr>
+                    <td>園區主題：</td>
+                    <td><input type="text" required name = 'area_name'></td>
+                    <td><input type ="submit" value="查詢"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>園區代碼</th>
+                <th>園區主題</th>
+                <th>園區位置</th>
+                <th>鄰近園區</th>
+                <th>特殊休息時間</th>
+            </tr>
+            {% for zookeeper in zookeeper_info%}
+                <tr>
+                    <td>{{zookeeper.keeper_id}}</td>
+                    <td>{{zookeeper.name}}</td>
+                    <td>{{current_year|subtract:zookeeper.birth}}</td>
+                    <td>{{zookeeper.join_time}}</td>
+                    <td>{{zookeeper.department}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock %}

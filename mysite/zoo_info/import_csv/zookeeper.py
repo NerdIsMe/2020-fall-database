@@ -10,7 +10,7 @@ from zoo_info.models import Zookeeper
 
 
 data = csv.reader(open('/home/jerome/2020_fall/database_project/mysite/zoo_info/import_csv/Zookeeper.csv', 'r', encoding = 'utf-8-sig'), delimiter = ',')
-
+print(data)
 for row in data:
     if row[0] != 'KeeperID':
         zookeeper = Zookeeper()

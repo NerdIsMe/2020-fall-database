@@ -1,0 +1,151 @@
+﻿Animal_ID,A_Name,Scientific_Name,Area_ID,Category,Conservation,H_ID
+1,大貓熊,Ailuropoda melanoleuca,14,哺乳綱,易危 VU,6
+2,國王企鵝,Aptenodytes patagonicus,10,鳥綱,無危 LC,110
+3,黑腳企鵝,Spheniscus demersu,10,鳥綱,瀕危 EN,110
+4,弓角羚羊,Addax nasomaculatus,4,哺乳綱,極危 CR,39
+5,非洲野驢,Equus africanus somaliensis,4,哺乳綱,極危 CR,24
+6,單峰駱駝,Camelus dromedarius,4,哺乳綱,無危 LC,20
+7,雙峰駱駝,Camelus bactrianus,4,哺乳綱,極危 CR,20
+8,人猿,Pongo pygmaeus,3,哺乳綱,極危 CR,4
+9,大長臂猿,Symphalangus syndactylus,3,哺乳綱,瀕危 EN,4
+10,印度大犀鳥,Bucero bicornis,3,鳥綱,接近受威脅 NT,4
+11,亞洲象,Elephas maximus,3,哺乳綱,瀕危 EN,2
+12,孟加拉虎,Panthera tigris tigris,3,哺乳綱,瀕危 EN,4
+13,花豹,Panthera pardus,3,哺乳綱,易危 VU,21
+14,馬來熊,Helarctos malayamus,3,哺乳綱,易危 VU,11
+15,馬來貘,Tapirus indicus,3,哺乳綱,瀕危 EN,11
+16,黑天鵝,Cygnus atratus,3,鳥綱,無危 LC,41
+17,白手長臂猿,Hylobates lar,3,哺乳綱,瀕危 EN,22
+18,家鴨,Anas platyrhynchos,2,鳥綱,無危 LC,31
+19,家雞,Gallus gallus domesticus,2,鳥綱,無危 LC,28
+20,家鵝,Anser domesticus,2,鳥綱,無危 LC,81
+21,天竺鼠,Cavia porcellus,2,哺乳綱,無危 LC,64
+22,北美土撥鼠,Cynomys ludovicianus,7,哺乳綱,無危 LC,86
+23,羊駝,Lama pacos,2,哺乳綱,無危 LC,108
+24,長鼻浣熊,Nasua nasua,2,哺乳綱,無危 LC,26
+25,家兔(馴化兔),Oryctolagus cuniculus,2,哺乳綱,無危 LC,71
+26,家驢,Equus asinus,2,哺乳綱,無危 LC,11
+27,迷你馬,Equus pony_mule,2,哺乳綱,未評估 NE,105
+28,黑蜘蛛猴,Ateles paniscus,3,哺乳綱,易危 VU,60
+29,絨鼠,Chinchilla laniger,2,哺乳綱,瀕危 EN,70
+30,狐獴,Suricata suricatta,2,哺乳綱,無危 LC,63
+31,黑冠松鼠猴,Saimiri boliviensis?,3,哺乳綱,無危 LC,31
+32,中國鱷蜥,Shinisaurus crocodilurus,12,爬蟲綱,瀕危 EN,91
+33,中部鬍鬚蜥,Pogona vitticeps,12,爬蟲綱,無危 LC,98
+34,加州王蛇,Lampropeltis getula californiae,12,爬蟲綱,無危 LC,87
+35,卡羅萊納箱龜,Terrapene carolina,12,爬蟲綱,易危 VU,39
+36,四爪陸龜,Testudo horsfieldi,12,爬蟲綱,易危 VU,104
+37,巨板蜥,Gerrhosaurus major,12,爬蟲綱,未評估 NE,41
+38,印度星龜,Geochelone elegans,12,爬蟲綱,易危 VU,65
+39,地毯莫瑞蟒,Morelia spilota,12,爬蟲綱,無危 LC,84
+40,百步蛇,Deinagkistrodon acutus,12,爬蟲綱,無危 LC,4
+41,西部豬鼻蛇,Heterodon nasicus,12,爬蟲綱,無危 LC,73
+42,亞洲棕龜,Manouria emys,12,爬蟲綱,瀕危 EN,26
+43,亞達伯拉象龜,Geochelone gigantea,12,爬蟲綱,易危 VU,15
+44,東方鈴蟾,Bombina orientalis,12,爬蟲綱,無危 LC,37
+45,非洲爪蟾,Xenopus laevis,12,兩棲綱,無危 LC,93
+46,扁頭長頸龜,Chelodina siebenrocki,12,爬蟲綱,接近受威脅 NT,18
+47,百花錦蛇,Elaphe moellendorffi,12,爬蟲綱,易危 VU,50
+48,柏布拉奶蛇,Lampropeltis triangulum campbelli,12,爬蟲綱,未評估 NE,9
+49,紅尾蚺,Boa constrictor,12,爬蟲綱,無危 LC,42
+50,紅腹側頸龜,Emydura subglobosa,12,爬蟲綱,無危 LC,24
+51,紅腿象龜,Chelonoidis carbonarius,15,爬蟲綱,易危 VU,15
+52,美洲鼠蛇,Elaphe obsoleta,12,爬蟲綱,無危 LC,55
+53,食蛇龜,Cistoclemmys flavomarginata,12,爬蟲綱,瀕危 EN,97
+54,射紋陸龜,Astrochelys radiata,15,爬蟲綱,極危 CR,45
+55,豹紋象龜,Geochelone pardalis,12,爬蟲綱,無危 LC,55
+56,豹紋瞼虎,Eublepharis macularius,12,爬蟲綱,無危 LC,38
+57,馬達加斯加鈍尾蜥,Oplurus cyclurus,12,爬蟲綱,無危 LC,20
+58,高冠變色龍,Chamaeleo calyptratus,12,爬蟲綱,無危 LC,59
+59,彩虹蚺,Epicrates cenchria,12,爬蟲綱,未評估 NE,27
+60,歐洲蛇蜥,Pseudopus apodus,12,爬蟲綱,無危 LC,89
+61,斜紋藍舌蜥,Tiliqua scincoides,12,爬蟲綱,無危 LC,69
+62,條紋頸帶蜥,Tupinambis teguixin,12,爬蟲綱,無危 LC,10
+63,球蟒,Python regius,12,爬蟲綱,無危 LC,63
+64,眼斑銅蜥,Chalcides ocellatus,12,爬蟲綱,接近受威脅 NT,63
+65,莫氏樹蛙,Rhacophorus moltrechti,12,兩棲綱,無危 LC,17
+66,斑龜,Ocadia sinensis,12,爬蟲綱,接近受威脅 NT,3
+67,斯文豪氏攀蜥,Japalura swinhonis,12,爬蟲綱,無危 LC,48
+68,猴尾蜥,Corucia zebrata,12,爬蟲綱,未評估 NE,105
+69,華麗王者蜥,Uromastyx ornata,12,爬蟲綱,未評估 NE,16
+70,鈍尾毒蜥,Heloderma suspectum,12,爬蟲綱,接近受威脅 NT,38
+71,黃頭象龜,Indotestudo elongata,12,爬蟲綱,瀕危 EN,19
+72,黃環林蛇,Boiga dendrophila,12,爬蟲綱,未評估 NE,4
+73,圓眼珍珠蛙,Lepidobatrachus laevis,12,兩棲綱,無危 LC,2
+74,飾紋角蛙,Ceratophrys ornata,12,兩棲綱,接近受威脅 NT,52
+75,綠長鬣蜥,Physignathus cocincinus,12,爬蟲綱,無危 LC,83
+76,綠樹蟒,Morelia viridis,12,爬蟲綱,無危 LC,21
+77,綠鬣蜥,Iguana iguana,12,爬蟲綱,無危 LC,48
+78,翡翠樹蛙,Rhacophorus prasinatus,12,爬蟲綱,接近受威脅 NT,73
+79,臺灣錦蛇,Elaphe taeniura friesei,12,爬蟲綱,未評估 NE,109
+80,赫曼氏陸龜,Testudo hermanni,12,爬蟲綱,接近受威脅 NT,64
+81,歐洲陸龜,Testudo graeca,12,爬蟲綱,易危 VU,18
+82,緬甸岩蟒,Python molurus bivittatus,12,爬蟲綱,易危 VU,16
+83,緬甸星龜,Geochelone platynota,12,爬蟲綱,極危 CR,51
+84,豬鼻龜,Carettochelys insculpta,12,爬蟲綱,瀕危 EN,95
+85,雙脊冠蜥,Basiliscus plumifrons,12,爬蟲綱,未評估 NE,4
+86,麗紋石龍子,Eumeces elegans,12,爬蟲綱,未評估 NE,36
+87,蘇利南負子蟾,Eumeces elegans,12,兩棲綱,無危 LC,29
+88,鱷龜,Macroclemys temminckii,12,爬蟲綱,易危 VU,47
+89,網紋蟒,Python reticulatus,12,爬蟲綱,無危 LC,85
+90,蘇卡達象龜,Geochelone sulcata,12,爬蟲綱,易危 VU,44
+91,揚子鱷,Chinese alligator,12,爬蟲綱,極危 CR,54
+92,黃頭陸龜,Indotestudo elongata,12,爬蟲綱,瀕危 EN,50
+93,大水黽,Aquarius elongatus,13,昆蟲綱,未評估 NE,50
+94,大白斑蝶,Idea leoconoe,13,昆蟲綱,無危 LC,110
+95,大紅娘華,Laccotrephes pfeiferiae,13,昆蟲綱,未評估 NE,9
+96,大琉璃紋鳳蝶,Papilio paris nakaharai,13,昆蟲綱,未評估 NE,94
+97,大鳳蝶,Papilio memnon heronus,13,昆蟲綱,無危 LC,102
+98,小紅娘華,Laccotrephes maculatus,13,昆蟲綱,未評估 NE,109
+99,玉帶鳳蝶,Papilio polytes,13,昆蟲綱,未評估 NE,106
+100,白條斑蔭蝶,Penthema formosanum,13,昆蟲綱,未評估 NE,26
+101,維多利亞冠鴿,Goura victoria,8,鳥綱,接近受威脅 NT,67
+102,黃腹藍琉璃金剛鸚鵡,Ara ararauna,8,鳥綱,無危 LC,35
+103,灰鶴,Grus grus,8,鳥綱,無危 LC,34
+104,黑天鵝,Cygnus atratus,8,鳥綱,無危 LC,8
+105,綠頭鴨,Anas platyrhynchos,8,鳥綱,無危 LC,86
+106,埃及雁,Alopochen aegyptiacus?,8,鳥綱,無危 LC,9
+107,鴛鴦,Aix galericulata,8,鳥綱,無危 LC,2
+108,白腹秧雞,Amaurornis phoenicurus?,8,鳥綱,無危 LC,77
+109,白鵜鶘,Pelecanus onocrotalus,8,鳥綱,無危 LC,98
+110,灰頸冠鶴,Balearica regulorum,8,鳥綱,瀕危 EN,32
+111,埃及聖鹮,Threskiornis aethiopicus,8,鳥綱,無危 LC,93
+112,簑羽鶴,Anthropoides virgo,8,鳥綱,無危 LC,104
+113,紅隼,Falco tinnunculus?,8,鳥綱,無危 LC,61
+114,栗鳶,Haliastur indus?,8,鳥綱,無危 LC,11
+115,鳳頭蒼鷹, Accipiter trivirgatus ,8,鳥綱,無危 LC,15
+116,小葵花鳳頭鸚鵡,Cacatua sulphurea,8,鳥綱,極危 CR,38
+117,馬來長吻鱷,Tomistoma?,3,爬蟲綱,易危 VU,105
+118,食蟹獴,Herpestes urva,3,哺乳綱,無危 LC,15
+119,黑掌蜘蛛猴,Ateles geoffroyi,3,哺乳綱,瀕危 EN,51
+120,水豚,Hydrochoerus hydrochaeris,3,哺乳綱,無危 LC,48
+121,大食蟻獸,Myrmecophaga tridactyla,3,哺乳綱,易危 VU,50
+122,南美小食蟻獸,Tamandua tetradactyla,3,哺乳綱,無危 LC,68
+123,黃腿象龜,Chelonoidis denticulata,15,爬蟲綱,易危 VU,36
+124,棕蜘蛛猴,Ateles hybridus,3,哺乳綱,極危 CR,45
+125,二趾樹獺,Choloepus didactylus,15,哺乳綱,無危 LC,105
+126,棉頭絹猴,Saguinus oedipus,15,哺乳綱,極危 CR,26
+127,阿氏夜猴,Aotus azarae,15,哺乳綱,無危 LC,25
+128,小懶猴,Nycticebus pygmaeus,15,哺乳綱,易危 VU,82
+129,金色箭毒蛙,Phyllobates terribilis,15,兩棲綱,無危 LC,110
+130,黃帶箭毒蛙,Dendrobates leucomelas,15,兩棲綱,無危 LC,9
+131,迷彩箭毒蛙,Dendrobates auratus,15,兩棲綱,無危 LC,91
+132,鈷藍箭毒蛙,Dendrobates tinctorius,15,兩棲綱,無危 LC,36
+133,美洲野牛,Bison bison,7,哺乳綱,接近受威脅 NT,106
+134,無尾熊,Phascolarctos cinereus,11,哺乳綱,易危 VU,56
+135,長頸鹿,Giraffa camelopardalis,6,哺乳綱,易危 VU,103
+136,侏儒河馬,Choeropsis liberiensis,6,哺乳綱,瀕危 EN,64
+137,環尾狐猴,Lemur catta,6,哺乳綱,瀕危 EN,28
+138,白頸狐猴,Varecia variegata,6,哺乳綱,極危 CR,52
+139,非洲獅,Panthera leo,6,哺乳綱,易危 VU,45
+140,穿山甲,Manis pentadactyla pentadactyla,1,哺乳綱,極危 CR,47
+141,梅花鹿,Cervus nippon taiouanus,1,哺乳綱,野外滅絕 EW,58
+142,馴化驢,Equus asinus,2,哺乳綱,無危 LC,42
+143,白犀牛,Ceratotherium simum simum,6,哺乳綱,接近受威脅 NT,72
+144,斑哥羚羊,Tragelaphus euryceros,6,哺乳綱,接近受威脅 NT,107
+145,紅毛猩猩,Simia pygmaeus,3,哺乳綱,極危 CR,8
+146,黑猩猩,Pan troglodytes,6,哺乳綱,瀕危 EN,83
+147,北美浣熊,Procyon lotor,7,哺乳綱,無危 LC,66
+148,查普曼斑馬,Equus burchelli,6,哺乳綱,接近受威脅 NT,70
+149,紅猴,Erythrocebus patas,6,哺乳綱,無危 LC,107
+150,蒙古野馬,Equus przewalskii,7,哺乳綱,瀕危 EN,82

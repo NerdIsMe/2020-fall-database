@@ -29,4 +29,5 @@ urlpatterns = [
     path('search/', search_menu),
     path('search/animal', search_animal),
     path('search/zookeeper', search_zookeeper),
+    path('search/area', search_area),
 ]
