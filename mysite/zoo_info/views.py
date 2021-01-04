@@ -78,3 +78,19 @@ def search_area(request):
     else:
         area_info = Area.objects.all()
     return render(request, 'zoo_info/search_by/area.html', locals())
+
+def search_habitat(request):
+    if 'habitat_name' in request.GET:
+        habitat_name = request.GET['habitat_name']
+
+        # weather
+        habitat_info = Habitat.objects.filter(weather__contains = habitat_name)
+        # continent
+        if habitat_info.count() == 0:
+            habitat_info = Habitat.objects.filter(continent__contains = habitat_name)
+        # terrain
+        if habitat_info.count() == 0:
+            habitat_info = Habitat.objects.filter(terrian__contains = habitat_name)
+    else:
+        habitat_info = Habitat.objects.all()
+    return render(request, 'zoo_info/search_by/habitat.html', locals())

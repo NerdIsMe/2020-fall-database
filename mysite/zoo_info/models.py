@@ -25,7 +25,8 @@ class Area(models.Model):
     position = models.CharField(max_length = 30)#
     nearby = models.CharField(max_length = 30)#
     theme = models.CharField(max_length = 30)#
-    close_time = models.TimeField()#
+    close_time = models.CharField(max_length = 30)#
+    distance = models.FloatField()
     zoo_id = models.ForeignKey(Zoo, on_delete = models.CASCADE)
 
 class Habitat(models.Model):

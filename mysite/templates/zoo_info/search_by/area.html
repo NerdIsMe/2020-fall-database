@@ -22,13 +22,14 @@
                 <th>鄰近園區</th>
                 <th>特殊休息時間</th>
             </tr>
-            {% for zookeeper in zookeeper_info%}
+            {% for area in area_info%}
                 <tr>
-                    <td>{{zookeeper.keeper_id}}</td>
-                    <td>{{zookeeper.name}}</td>
-                    <td>{{current_year|subtract:zookeeper.birth}}</td>
-                    <td>{{zookeeper.join_time}}</td>
-                    <td>{{zookeeper.department}}</td>
+                    <td>{{area.area_id}}</td>
+                    <td>{{area.theme}}</td>
+                    <td>{{area.position}}</td>
+                    <td>{{area.nearby}}</td>
+                    <td>{{area.close_time}}</td>
+                    <td>{{area.distance}}</td>
                 </tr>
             {% endfor %}
         </table>

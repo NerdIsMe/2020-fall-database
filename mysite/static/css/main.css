@@ -2153,6 +2153,7 @@
 
 	input[type="checkbox"],
 	input[type="radio"] {
+		
 		-moz-appearance: none;
 		-webkit-appearance: none;
 		-ms-appearance: none;
@@ -4063,4 +4064,10 @@ div#logout h6
 
 div#search_userdata{
 	margin: 15px 100px 20px 100px;
+}
+
+
+
+input[type="radio1"]{
+    -webkit-appearance: radio;
 }

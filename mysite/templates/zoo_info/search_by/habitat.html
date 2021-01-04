@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load subtract %}
+    <div>
+        <form>
+            <table>
+                <tr>
+                    <td>查詢：</td>
+                    <td><input type="text" required name = 'habitat_name'></td>
+                    <td><input type ="submit" value="查詢"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>分布大洲</th>
+                <th>分布氣候</th>
+                <th>分布地形</th>
+            </tr>
+            {% for habitat in habitat_info%}
+                <tr>
+                    <td>{{habitat.continent}}</td>
+                    <td>{{habitat.weather}}</td>
+                    <td>{{habitat.terrian}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock %}
