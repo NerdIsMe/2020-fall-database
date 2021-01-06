@@ -12,5 +12,26 @@
             </table>
         </form>
     </div>
-
+    <div>
+        <table>
+            <tr>
+                <th>名字</th>
+                <th>學名</th>
+                <th>種</th>
+                <th>保育狀態</th>
+                <th>分布地區</th>
+                <th>分布園區</th>
+            </tr>
+            {% for animal in animal_info%}
+                <tr>
+                    <td>{{animal.animal_name}}</td>
+                    <td>{{animal.scientific_id}}</td>
+                    <td>{{animal.category}}</td>
+                    <td>{{animal.conservation}}</td>
+                    <td>{{animal.h_id.continent}} - {{animal.h_id.weather}} - {{animal.h_id.terrian}}</td>
+                    <td>{{animal.area_id.theme}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
 {% endblock %}

@@ -60,6 +60,11 @@ def search_menu(request):
     return render(request, 'zoo_info/search_menu.html', locals())
 
 def search_animal(request):
+    if 'animal_name' in request.GET:
+        animal_name = request.GET['animal_name']
+        animal_info = Animal.objects.filter(animal_name__contains = animal_name)
+    else:
+        animal_info = Animal.objects.all()
     return render(request, 'zoo_info/search_by/animal.html', locals())
 
 def search_zookeeper(request):
