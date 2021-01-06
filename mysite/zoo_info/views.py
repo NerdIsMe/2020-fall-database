@@ -67,6 +67,10 @@ def search_animal(request):
         animal_info = Animal.objects.all()
     return render(request, 'zoo_info/search_by/animal.html', locals())
 
+def individual_animal(request, individual_id):
+    individual_animal = IndividualAnimal.objects.get(id = individual_id)
+    return render(request, 'zoo_info/search_by/individual_animal.html', locals())
+
 def search_zookeeper(request):
     current_year = 2021
     if 'zookeeper_name' in request.GET:
@@ -99,3 +103,4 @@ def search_habitat(request):
     else:
         habitat_info = Habitat.objects.all()
     return render(request, 'zoo_info/search_by/habitat.html', locals())
+

@@ -16,6 +16,7 @@ for row in data:
         A_id = Area.objects.get(area_id = int(row[3]))
         H_id = Habitat.objects.get(H_id = int(row[6]))
         animal = Animal()
+        animal.animal_id = row[0]
         animal.scientific_id = row[2]
         animal.animal_name = row[1]
         animal.category = row[4]

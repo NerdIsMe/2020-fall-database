@@ -21,6 +21,7 @@
                 <th>保育狀態</th>
                 <th>分布地區</th>
                 <th>分布園區</th>
+                <th>園區明星</th>
             </tr>
             {% for animal in animal_info%}
                 <tr>
@@ -28,8 +29,13 @@
                     <td>{{animal.scientific_id}}</td>
                     <td>{{animal.category}}</td>
                     <td>{{animal.conservation}}</td>
-                    <td>{{animal.h_id.continent}} - {{animal.h_id.weather}} - {{animal.h_id.terrian}}</td>
+                    <td>{{animal.h_id.continent}}-{{animal.h_id.weather}}-{{animal.h_id.terrian}}</td>
                     <td>{{animal.area_id.theme}}</td>
+                    <td>
+                        {% for i in animal.individualanimal_set.all%}
+                            <a href = './{{i.id}}'>{{i.name}}</a>
+                        {% endfor %}
+                    </td>
                 </tr>
             {% endfor %}
         </table>

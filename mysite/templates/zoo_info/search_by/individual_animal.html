@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{individual_animal.name}}</h1>
+
+<div>
+    <table>
+        <tr>
+            <td>種類</td>
+            <td>{{individual_animal.animal_id.animal_name}}</td>
+        </tr>
+        <tr>
+            <td>年齡</td>
+            <td>{{individual_animal.age}}</td>
+        </tr>
+        <tr>
+            <td>進館年分</td>
+            <td>{{individual_animal.year_in}}</td>
+        </tr>
+    </table>
+
+    <form action="../animal">
+        <input type="submit" value="返回" />
+    </form>
+</div>
+
+{% endblock %}

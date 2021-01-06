@@ -36,7 +36,8 @@ class Habitat(models.Model):
     terrian = models.CharField(max_length = 30)
 
 class Animal(models.Model):
-    scientific_id = models.CharField(max_length = 30, primary_key = True)
+    animal_id = models.IntegerField(primary_key = True)
+    scientific_id = models.CharField(max_length = 30)
     animal_name = models.CharField(max_length = 30)
     category = models.CharField(max_length = 30)
     conservation = models.CharField(max_length = 30)
@@ -44,7 +45,7 @@ class Animal(models.Model):
     area_id = models.ForeignKey(Area, on_delete = models.CASCADE)
 
 class IndividualAnimal(models.Model):
-    idividual_id = models.CharField(max_length = 30, primary_key = True)
+    name = models.CharField(max_length = 30)
     age = models.IntegerField()
     year_in = models.IntegerField()
     animal_id = models.ForeignKey(Animal, on_delete = models.CASCADE)
