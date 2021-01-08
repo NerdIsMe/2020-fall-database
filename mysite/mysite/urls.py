@@ -28,8 +28,10 @@ urlpatterns = [
     # Search 
     path('search/', search_menu),
     path('search/animal/', search_animal),
-    path('search/animal/<int:individual_id>', individual_animal),
+    path('search/animal/<int:animal_id>/', animal_info),
+    path('search/individual_animal/<int:individual_id>', individual_animal),
     path('search/zookeeper/', search_zookeeper),
     path('search/area/', search_area),
+    path('search/area/<int:area_id>/', area_info),
     path('search/habitat/', search_habitat),
 ]

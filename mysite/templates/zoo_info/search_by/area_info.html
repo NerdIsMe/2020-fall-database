@@ -1,18 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
     <div>
-        <form>
-            <table>
-                <tr>
-                    <td>動物物名稱：</td>
-                    <td><input type="text" required name = 'animal_name'></td>
-                    <td><input type ="submit" value="查詢"></td>
-                </tr>
-            </table>
-        </form>
+        <H1>{{area.theme}}</H1>
     </div>
     <div>
+        <h3>動物：</h3>
         <table>
             <tr>
                 <th>名字</th>
@@ -23,7 +17,7 @@
             </tr>
             {% for animal in animal_info%}
                 <tr>
-                    <td><a href = "./{{animal.animal_id}}/">{{animal.animal_name}}</a></td>
+                    <td><a href = "/search/animal/{{animal.animal_id}}/">{{animal.animal_name}}</a></td>
                     <td>{{animal.scientific_id}}</td>
                     <td>{{animal.category}}</td>
                     <td>{{animal.h_id.continent}}-{{animal.h_id.weather}}-{{animal.h_id.terrian}}</td>
@@ -31,5 +25,25 @@
                 </tr>
             {% endfor %}
         </table>
+        
+        <h3>服務設施：</h3>
+        <table>
+            <tr>
+                <th>服務類別</th>
+                <th>名稱</th>
+            </tr>
+            {% for facility in area.facility_set.all %}
+            <tr>
+                <td>{{facility.type}}</td>
+                <td>{{facility.name}}</td>
+            </tr>
+            {% endfor %}
+  
+        </table>
+
+
+        <form action="../">
+            <input type ="button" onclick="history.back()" value="回到上一頁"></input>
+        </form>
     </div>
 {% endblock %}

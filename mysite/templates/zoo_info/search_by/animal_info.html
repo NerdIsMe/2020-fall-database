@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div>
+        <h3>{{animal.animal_name}}</h3>
+        <table>
+            <tr>
+                <th>學名</th>
+                <td>{{animal.scientific_id}}</td>
+            </tr>
+            <tr>
+                <th>綱別</th>
+                <td>{{animal.category}}</td>
+            </tr>
+            <tr>
+                <th>分布園區</th>
+                <td><a href = "/search/area/{{animal.area_id.area_id}}/">{{animal.area_id.theme}}</a></td>
+            </tr>
+            <tr>
+                <th>保育狀態</th>
+                <td>{{animal.conservation}}</td>
+            </tr>
+            <tr>
+                <th>分布地區-氣候-海拔</th>
+                <td>{{animal.h_id.continent}} - {{animal.h_id.weather}} - {{animal.h_id.terrian}}</td>
+            </tr>
+            <tr>
+                <th>環境溫度</th>
+                <td>{{feed.temperature_low}}&#8451 ~ {{feed.temperature_high}}&#8451</td>
+            </tr>
+            <tr>
+                <th>食性</th>
+                <td>{{feed.food}}</td>
+            </tr>
+
+            <tr>
+                <th>飼育員</th>
+                <td>{{feed.keeper_id.name}}</td>
+            </tr>
+            <tr>
+                <th>園區明星</th>
+                <td>
+                    {% for i in animal.individualanimal_set.all%}
+                        <a href = '/search/individual_animal/{{i.id}}'>{{i.name}}</a>
+                    {% endfor %}
+                </td>
+            </tr>
+        </table>
+
+
+        <form action="../">
+            <input type ="button" onclick="history.back()" value="回到上一頁"></input>
+        </form>
+    </div>
+{% endblock %}

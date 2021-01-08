@@ -18,18 +18,19 @@
             <tr>
                 <th>園區代碼</th>
                 <th>園區主題</th>
-                <th>園區位置</th>
                 <th>鄰近園區</th>
                 <th>特殊休息時間</th>
+                <th>遠近順序</th>
+                <th>入口距離（公尺）</th>
             </tr>
             {% for area in area_info%}
                 <tr>
                     <td>{{area.area_id}}</td>
-                    <td>{{area.theme}}</td>
-                    <td>{{area.position}}</td>
+                    <td><a href = "./{{area.area_id}}/">{{area.theme}}</a></td>
                     <td>{{area.nearby}}</td>
                     <td>{{area.close_time}}</td>
-                    <td>{{area.distance}}</td>
+                    <td>{{area.position}}</td>
+                    <td>{{area.distance|floatformat:1}}</td>
                 </tr>
             {% endfor %}
         </table>

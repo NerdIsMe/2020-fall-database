@@ -67,6 +67,11 @@ def search_animal(request):
         animal_info = Animal.objects.all()
     return render(request, 'zoo_info/search_by/animal.html', locals())
 
+def animal_info(request, animal_id):
+    animal = Animal.objects.get(animal_id = animal_id)
+    feed = Feed.objects.get(animal_id = animal_id)
+    return render(request, 'zoo_info/search_by/animal_info.html', locals())
+
 def individual_animal(request, individual_id):
     individual_animal = IndividualAnimal.objects.get(id = individual_id)
     return render(request, 'zoo_info/search_by/individual_animal.html', locals())
@@ -87,6 +92,12 @@ def search_area(request):
     else:
         area_info = Area.objects.all()
     return render(request, 'zoo_info/search_by/area.html', locals())
+
+def area_info(request, area_id):
+    area = Area.objects.get(area_id = area_id)
+    animal_info = Animal.objects.filter(area_id = area)
+    facilities = Facility.objects.filter(area_id = area)
+    return render(request, 'zoo_info/search_by/area_info.html', locals())
 
 def search_habitat(request):
     if 'habitat_name' in request.GET:
