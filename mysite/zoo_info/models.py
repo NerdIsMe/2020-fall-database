@@ -29,6 +29,12 @@ class Area(models.Model):
     distance = models.FloatField()
     zoo_id = models.ForeignKey(Zoo, on_delete = models.CASCADE)
 
+class Facility(models.Model):
+    zoo_id = models.ForeignKey(Zoo, on_delete = models.CASCADE)
+    type = models.CharField(max_length = 30)
+    name = models.CharField(max_length = 30)
+    area_id = models.ForeignKey(Area, on_delete = models.CASCADE)
+
 class Habitat(models.Model):
     H_id = models.CharField(max_length = 30, primary_key = True)
     weather = models.CharField(max_length = 30)
@@ -50,10 +56,23 @@ class IndividualAnimal(models.Model):
     year_in = models.IntegerField()
     animal_id = models.ForeignKey(Animal, on_delete = models.CASCADE)
 
+class Dependent(models.Model):
+    name = models.CharField(max_length = 30)
+    pname = models.CharField(max_length = 30)
+    relation = models.CharField(max_length = 30)
+    animal_id = models.ForeignKey(Animal, on_delete = models.CASCADE)
+
 class Zookeeper(models.Model):
     keeper_id = models.IntegerField(primary_key = True)
     name = models.CharField(max_length = 30)
     join_time = models.IntegerField()
     department = models.CharField(max_length = 30)
     birth = models.IntegerField()
+
+class Feed(models.Model):
+    animal_id = models.ForeignKey(Animal, on_delete = models.CASCADE)
+    keeper_id = models.ForeignKey(Zookeeper, on_delete = models.CASCADE)
+    food = models.CharField(max_length = 30)
+    temperature_low = models.FloatField()
+    temperature_high = models.FloatField()
 

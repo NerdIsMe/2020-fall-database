@@ -29,7 +29,7 @@
 28,黑蜘蛛猴,Ateles paniscus,3,哺乳綱,易危 VU,60
 29,絨鼠,Chinchilla laniger,2,哺乳綱,瀕危 EN,70
 30,狐獴,Suricata suricatta,2,哺乳綱,無危 LC,63
-31,黑冠松鼠猴,Saimiri boliviensis?,3,哺乳綱,無危 LC,31
+31,黑冠松鼠猴,Saimiri boliviensis,3,哺乳綱,無危 LC,31
 32,中國鱷蜥,Shinisaurus crocodilurus,12,爬蟲綱,瀕危 EN,91
 33,中部鬍鬚蜥,Pogona vitticeps,12,爬蟲綱,無危 LC,98
 34,加州王蛇,Lampropeltis getula californiae,12,爬蟲綱,無危 LC,87
@@ -104,18 +104,18 @@
 103,灰鶴,Grus grus,8,鳥綱,無危 LC,34
 104,黑天鵝,Cygnus atratus,8,鳥綱,無危 LC,8
 105,綠頭鴨,Anas platyrhynchos,8,鳥綱,無危 LC,86
-106,埃及雁,Alopochen aegyptiacus?,8,鳥綱,無危 LC,9
+106,埃及雁,Alopochen aegyptiacus,8,鳥綱,無危 LC,9
 107,鴛鴦,Aix galericulata,8,鳥綱,無危 LC,2
-108,白腹秧雞,Amaurornis phoenicurus?,8,鳥綱,無危 LC,77
+108,白腹秧雞,Amaurornis phoenicurus,8,鳥綱,無危 LC,77
 109,白鵜鶘,Pelecanus onocrotalus,8,鳥綱,無危 LC,98
 110,灰頸冠鶴,Balearica regulorum,8,鳥綱,瀕危 EN,32
 111,埃及聖鹮,Threskiornis aethiopicus,8,鳥綱,無危 LC,93
 112,簑羽鶴,Anthropoides virgo,8,鳥綱,無危 LC,104
-113,紅隼,Falco tinnunculus?,8,鳥綱,無危 LC,61
-114,栗鳶,Haliastur indus?,8,鳥綱,無危 LC,11
+113,紅隼,Falco tinnunculus,8,鳥綱,無危 LC,61
+114,栗鳶,Haliastur indus,8,鳥綱,無危 LC,11
 115,鳳頭蒼鷹, Accipiter trivirgatus ,8,鳥綱,無危 LC,15
 116,小葵花鳳頭鸚鵡,Cacatua sulphurea,8,鳥綱,極危 CR,38
-117,馬來長吻鱷,Tomistoma?,3,爬蟲綱,易危 VU,105
+117,馬來長吻鱷,Tomistoma,3,爬蟲綱,易危 VU,105
 118,食蟹獴,Herpestes urva,3,哺乳綱,無危 LC,15
 119,黑掌蜘蛛猴,Ateles geoffroyi,3,哺乳綱,瀕危 EN,51
 120,水豚,Hydrochoerus hydrochaeris,3,哺乳綱,無危 LC,48
