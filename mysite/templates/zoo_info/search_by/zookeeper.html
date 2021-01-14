@@ -25,7 +25,7 @@
             {% for zookeeper in zookeeper_info%}
                 <tr>
                     <td>{{zookeeper.keeper_id}}</td>
-                    <td>{{zookeeper.name}}</td>
+                    <td><a href = "./{{zookeeper.keeper_id}}/">{{zookeeper.name}}</a></td>
                     <td>{{current_year|subtract:zookeeper.birth}} 歲</td>
                     <td>{{zookeeper.join_time}}</td>
                     <td>{{zookeeper.department}}</td>

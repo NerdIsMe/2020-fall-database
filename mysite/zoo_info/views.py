@@ -85,6 +85,12 @@ def search_zookeeper(request):
         zookeeper_info = Zookeeper.objects.all()
     return render(request, 'zoo_info/search_by/zookeeper.html', locals())
 
+def zookeeper_feed_info(request, keeper_id): 
+    current_year = 2021
+    zookeeper = Zookeeper.objects.get(keeper_id = keeper_id)
+    feeds = Feed.objects.filter(keeper_id = zookeeper)
+    return render(request, 'zoo_info/search_by/zookeeper_feed_info.html', locals())
+
 def search_area(request):
     if 'area_name' in request.GET:
         area_name = request.GET['area_name']

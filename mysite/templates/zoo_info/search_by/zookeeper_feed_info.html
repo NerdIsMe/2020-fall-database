@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load subtract %}
+    <div>
+        <H1>飼育員 {{zookeeper.name}}</H1>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>員工編號</th>
+                <td>{{zookeeper.keeper_id}}</td>
+            </tr>
+            <tr>
+                <th>年齡</th>
+                <td>{{current_year|subtract:zookeeper.birth}}</td>
+            </tr>
+            <tr>
+                <th>開始服務年</th>
+                <td>{{zookeeper.join_time}}</td>
+            </tr>
+            <tr>
+                <th>管區</th>
+                <td>{{zookeeper.department}}</td>
+            </tr>
+            
+        </table>
+
+        <H3>負責動物：</H3>
+        <table>
+            <tr>
+                <th>動物名稱</th>
+                <th>食性</th>
+                <th>環境溫度</th>
+            </tr>
+            {% for feed in feeds%}
+                <tr>
+                    <td><a href = "../../animal/{{feed.animal_id.animal_id}}/">{{feed.animal_id.animal_name}}</a></td>
+                    <td>{{feed.food}}</td>
+                    <td>{{feed.temperature_low}}&#8451 ~ {{feed.temperature_high}}&#8451</td>
+                </tr>
+            {%endfor%}
+        </table>
+
+        <form action="../">
+            <input type ="button" onclick="history.back()" value="回到上一頁"></input>
+        </form>
+    </div>
+{% endblock %}
