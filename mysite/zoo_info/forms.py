@@ -5,7 +5,7 @@ GENDER_CHOICES = [('male', '男'), ('female', '女')]
 BIRTH_YEAR_CHOICES = [i for i in range(1900, datetime.datetime.now().year+1)]
 class LoginForm(forms.Form):
     user_id = forms.CharField(max_length =30)
-    password = forms.CharField(max_length = 30)
+    password = forms.CharField(max_length = 30, widget=forms.PasswordInput())
 
 class RegisterForm(forms.Form):
     name = forms.CharField(max_length =30) # 姓名

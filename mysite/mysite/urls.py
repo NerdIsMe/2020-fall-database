@@ -35,4 +35,7 @@ urlpatterns = [
     path('search/area/', search_area),
     path('search/area/<int:area_id>/', area_info),
     path('search/habitat/', search_habitat),
+
+    # super user
+    path('search/zookeeper/insert/', superuser_zookeeper_insert),
 ]

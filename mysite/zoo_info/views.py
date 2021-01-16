@@ -121,3 +121,18 @@ def search_habitat(request):
         habitat_info = Habitat.objects.all()
     return render(request, 'zoo_info/search_by/habitat.html', locals())
 
+# super user
+@login_required
+def superuser_zookeeper_insert(request):
+    if not request.user.is_superuser:
+        return HttpResponseRedirect('/home/')
+    
+    if 'z_id' in request.POST:
+        new_zookeeper = Zookeeper()
+        new_zookeeper.keeper_id = int(request.POST['z_id'])
+        new_zookeeper.name = int(request.POST['z_name'])
+        new_zookeeper.join_time = int(request.POST['z_join_time'])
+        new_zookeeper.birth = int(request.POST['z_birth'])
+        z_department = Dependent.objects.get()
+        new_zookeeper.deparment = int(request.POST['z_id'])
+    return render(request, 'zoo_info/superuser/zookeeper_insert.html', locals())

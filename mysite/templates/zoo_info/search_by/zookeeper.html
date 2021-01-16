@@ -9,6 +9,9 @@
                     <td>飼育員名字：</td>
                     <td><input type="text" required name = 'zookeeper_name'></td>
                     <td><input type ="submit" value="查詢"></td>
+                    {%if request.user.is_superuser%}
+                    <td><input type="button" value="新增飼育員" onclick="location.href='./insert/'"></td>
+                    {%endif%}
                 </tr>
             </table>
         </form>
