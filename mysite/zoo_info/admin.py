@@ -14,7 +14,7 @@ class ZooAdmin(admin.ModelAdmin):
 #     list_display('Area_id', 'position', 'nearby')
 
 class ZookeeperAdmin(admin.ModelAdmin):
-    list_display = ('keeper_id', 'name', 'join_time', 'department', 'birth')
+    list_display = ('keeper_id', 'name', 'join_time', 'area_id', 'birth')
     #list_filter = ('number_of_visitors', 'number_of_categories')
 
 class AnimalAdmin(admin.ModelAdmin):

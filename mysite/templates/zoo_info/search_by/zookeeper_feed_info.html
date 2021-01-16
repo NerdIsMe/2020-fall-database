@@ -20,9 +20,15 @@
             </tr>
             <tr>
                 <th>管區</th>
-                <td>{{zookeeper.department}}</td>
+                <td>{{zookeeper.area_id.theme}}</td>
             </tr>
-            
+            {% if request.user.is_superuser%}
+            <tr>
+                <form>
+                    <td><input type="button" value="修改資料" onclick="location.href='./modify_personal_info/'"></td>
+                </form>
+            </tr>
+            {%endif%}
         </table>
 
         <H3>負責動物：</H3>
@@ -39,6 +45,13 @@
                     <td>{{feed.temperature_low}}&#8451 ~ {{feed.temperature_high}}&#8451</td>
                 </tr>
             {%endfor%}
+            {% if request.user.is_superuser%}
+            <tr>
+                <form>
+                    <td><input type="button" value="新增/移除動物" onclick="location.href='./modify_animal/'"></td>
+                </form>
+            </tr>
+            {%endif%}
         </table>
 
         <form action="../">

@@ -6,7 +6,7 @@ from django.conf import settings
 os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'
 import django
 django.setup()
-from zoo_info.models import Zookeeper
+from zoo_info.models import Zookeeper, Area
 
 
 data = csv.reader(open('/home/jerome/2020_fall/database_project/mysite/zoo_info/import_csv/Zookeeper.csv', 'r', encoding = 'utf-8-sig'), delimiter = ',')
@@ -17,6 +17,7 @@ for row in data:
         zookeeper.keeper_id = row[0]
         zookeeper.name = row[1]
         zookeeper.join_time = row[2]
-        zookeeper.department = row[3]
         zookeeper.birth = row[4]
+        keeper_area = Area.objects.get(theme = row[3])
+        zookeeper.area_id = keeper_area
         zookeeper.save()

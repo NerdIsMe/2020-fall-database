@@ -36,6 +36,7 @@ urlpatterns = [
     path('search/area/<int:area_id>/', area_info),
     path('search/habitat/', search_habitat),
 
-    # super user
+    # superuser
     path('search/zookeeper/insert/', superuser_zookeeper_insert),
+    path('search/zookeeper/<int:keeper_id>/modify_personal_info/', superuser_zookeeper_modify_personal_info),
 ]

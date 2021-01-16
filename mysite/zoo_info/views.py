@@ -130,9 +130,27 @@ def superuser_zookeeper_insert(request):
     if 'z_id' in request.POST:
         new_zookeeper = Zookeeper()
         new_zookeeper.keeper_id = int(request.POST['z_id'])
-        new_zookeeper.name = int(request.POST['z_name'])
+        new_zookeeper.name = request.POST['z_name']
         new_zookeeper.join_time = int(request.POST['z_join_time'])
         new_zookeeper.birth = int(request.POST['z_birth'])
-        z_department = Dependent.objects.get()
-        new_zookeeper.deparment = int(request.POST['z_id'])
+        new_zookeeper.area_id = Area.objects.get(area_id = request.POST['z_area_id'])
+        new_zookeeper.save()
+        return HttpResponseRedirect('../')
+
     return render(request, 'zoo_info/superuser/zookeeper_insert.html', locals())
+
+
+@login_required
+def superuser_zookeeper_modify_personal_info(request, keeper_id):
+    if not request.user.is_superuser:
+        return HttpResponseRedirect('/home/')
+    the_zookeeper = Zookeeper.objects.get(keeper_id = keeper_id)
+    if 'z_name' in request.POST:
+        the_zookeeper.name = request.POST['z_name']
+        the_zookeeper.join_time = int(request.POST['z_join_time'])
+        the_zookeeper.birth = int(request.POST['z_birth'])
+        the_zookeeper.area_id = Area.objects.get(area_id = request.POST['z_area_id'])
+        the_zookeeper.save()
+        return HttpResponseRedirect('../')
+
+    return render(request, 'zoo_info/superuser/zookeeper_modify_personal_info.html', locals())

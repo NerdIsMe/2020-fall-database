@@ -66,7 +66,7 @@ class Zookeeper(models.Model):
     keeper_id = models.IntegerField(primary_key = True)
     name = models.CharField(max_length = 30)
     join_time = models.IntegerField()
-    department = models.CharField(max_length = 30)
+    area_id = models.ForeignKey(Area, on_delete = models.CASCADE)
     birth = models.IntegerField()
 
 class Feed(models.Model):
