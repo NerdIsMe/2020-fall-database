@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>{{the_zookeeper.name}} 飼育員</h2>
+    <div>
+        <H3>負責動物：</H3>
+        <table>
+            <tr>
+                <th>動物編號</th>
+                <th>動物名稱</th>
+                <th>食性</th>
+                <th>環境溫度</th>
+                <th>刪除</th>
+            </tr>
+            {% for feed in feeds%}
+                <tr>
+                    <td>{{feed.animal_id.animal_id}}</td>
+                    <td>{{feed.animal_id.animal_name}}</td>
+                    <td>{{feed.food}}</td>
+                    <td>{{feed.temperature_low}}&#8451 ~ {{feed.temperature_high}}&#8451</td>
+                    <form method="POST"> {%csrf_token%}
+                        <td><input type = 'submit' name = {{feed.id}} value = '刪除'></td>
+                    </form>
+
+                </tr>
+            {%endfor%}
+        </table>
+
+        <H3>新增動物：</H3>
+        <table>
+            <tr>
+                <th>動物編號</th>
+                <th>食性</th>
+                <th>環境溫度（最低）</th>
+                <th>環境溫度（最高）</th>
+                <th>確認</th>
+            </tr>
+            <form method="POST"> {%csrf_token%}
+            <tr>
+                <td><input type = 'number' name = 'a_id'></td>
+                <td><select name = "food">
+                    　<option value="草食">草食</option>
+                    　<option value="肉食">肉食</option>
+                    　<option value="雜食">雜食</option>
+                    　<option value="果實">果實</option>
+                    <option value="昆蟲">昆蟲</option>
+                    <option value="花蜜">花蜜</option>
+                    </select></td>
+                <td><input type = 'number' step = 0.1 name = 'temp_low'>&#8451</td>
+                <td><input type = 'number' step = 0.1 name = 'temp_high'>&#8451</td>
+                <td><input type = 'submit' name = 'add_feed' value = '新增'></td>
+            </tr>
+            <form method="POST"> {%csrf_token%}
+        </table>
+        <form>
+            <input type ="button" onclick="javascript:location.href='../'" value="返回"></input>
+        </form>
+        </div>
+{% endblock %}

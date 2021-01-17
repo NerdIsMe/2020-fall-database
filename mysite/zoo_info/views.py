@@ -3,8 +3,10 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import auth
+from django.contrib.auth.decorators import user_passes_test
 from .forms import *
 from .models import *
+
 # Create your views here.
 def home(request):
     return render(request, 'home.html', locals())
@@ -154,3 +156,29 @@ def superuser_zookeeper_modify_personal_info(request, keeper_id):
         return HttpResponseRedirect('../')
 
     return render(request, 'zoo_info/superuser/zookeeper_modify_personal_info.html', locals())
+
+
+@user_passes_test(lambda u: u.is_superuser)
+def superuser_zookeeper_modify_animal(request, keeper_id):
+    the_zookeeper = Zookeeper.objects.get(keeper_id = keeper_id)
+    feeds = Feed.objects.filter(keeper_id = keeper_id)
+
+    if request.method == 'POST':
+        # 新增 feed
+        if 'add_feed' in request.POST:
+            new_feed = Feed()
+            new_feed.animal_id = Animal.objects.get(animal_id = int(request.POST['a_id']))
+            new_feed.keeper_id = the_zookeeper
+            new_feed.food = request.POST['food']
+            new_feed.temperature_low = float(request.POST['temp_low'])
+            new_feed.temperature_high = float(request.POST['temp_high'])
+            new_feed.save()
+            return HttpResponseRedirect('./')
+        # 刪除 feed
+        for key, value in request.POST.items():
+            if value == '刪除':
+                del_feed_id = int(key)
+                Feed.objects.get(id = del_feed_id).delete()
+                return HttpResponseRedirect('./')
+        
+    return render(request, 'zoo_info/superuser/zookeeper_modify_animal.html', locals())
