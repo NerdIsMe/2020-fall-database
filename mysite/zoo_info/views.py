@@ -56,7 +56,6 @@ def zoo_list(request):
     zoo_data = Zoo.objects.all()
     return render(request, 'zoo_info/zoo_list.html', locals())
 
-
 # search
 def search_menu(request):
     return render(request, 'zoo_info/search_menu.html', locals())
@@ -141,7 +140,6 @@ def superuser_zookeeper_insert(request):
 
     return render(request, 'zoo_info/superuser/zookeeper_insert.html', locals())
 
-
 @login_required
 def superuser_zookeeper_modify_personal_info(request, keeper_id):
     if not request.user.is_superuser:
@@ -156,7 +154,6 @@ def superuser_zookeeper_modify_personal_info(request, keeper_id):
         return HttpResponseRedirect('../')
 
     return render(request, 'zoo_info/superuser/zookeeper_modify_personal_info.html', locals())
-
 
 @user_passes_test(lambda u: u.is_superuser)
 def superuser_zookeeper_modify_animal(request, keeper_id):

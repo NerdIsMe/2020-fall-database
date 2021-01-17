@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
-{% block content %}
-
-<h1>依類別查詢：</h1>
-    <div>
-        <table>
-            <tr>
-                <td><a href = "/search/area">園區資訊</a></td>
-                <td><a href = "/search/animal">動物名稱</a></td>
-                <td><a href = "/search/zookeeper">飼育員</a></td>
-                <td><a href = "/search/habitat">生活環境</a></td>
-            </tr>
-        </table>
-    </div>
+{% block content%}
+    {%include 'base_search.html'%}
+    <h1>依類別查詢：</h1>
+        <div>
+            <table>
+                <tr>
+                    <td><a href = "/search/area">園區資訊</a></td>
+                    <td><a href = "/search/animal">動物名稱</a></td>
+                    <td><a href = "/search/zookeeper">飼育員</a></td>
+                    <td><a href = "/search/habitat">生活環境</a></td>
+                </tr>
+            </table>
+        </div>
 {% endblock %}
+

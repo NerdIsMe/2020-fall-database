@@ -1,35 +1,23 @@
-<!DOCTYPE html>
-{%load static%}
-<head>
-    <meta charset="utf-8">
-    <title>註冊</title>
-    <link rel=stylesheet type="text/css" href="{%static "css/main.css" %}">
-
-</head>
-
-<body>
-    <header id="header">
-        <div class="inner">
-            <a href="/" class="logo">動物園鴨鴨<span style="font-size:15px;">  動物園公開資訊搜尋引擎</span></a>
+{%extends 'base.html'%}
+    {%block content%}
+    {%include 'base_search.html'%}
+    {%load static%}
+        <div id='register_form'>
+            <h2>建立個人帳戶</h2>
+            <form action = '' method="POST"> {% csrf_token %}
+                <table align="left">
+                    <tr>
+                        <td>姓名：</td>
+                        <td>{{user_data.name}}</td>
+                    </tr>
+                    <tr>
+                        <td>生理性別：</td>
+                        <td>{{user_data.gender}}</td>
+                    </tr>
+                </table>
+                {{new_user.as_p}}
+                <td><input type="submit" value="註冊" id = 'login_button'></td>
+            </form>
         </div>
-    </header>
-
-    <div id='register_form'>
-        <h2>建立個人帳戶</h2>
-        <form action = '' method="POST"> {% csrf_token %}
-            <table align="left">
-                <tr>
-                    <td>姓名：</td>
-                    <td>{{user_data.name}}</td>
-                </tr>
-                <tr>
-                    <td>生理性別：</td>
-                    <td>{{user_data.gender}}</td>
-                </tr>
-            </table>
-            {{new_user.as_p}}
-            <td><input type="submit" value="註冊" id = 'login_button'></td>
-        </form>
-    </div>
-    
-</body>
+        
+    {%endblock%}

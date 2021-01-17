@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-{%load static%}
-<head>
-    <meta charset="utf-8">
-    <title>登入</title>
-    <link rel=stylesheet type="text/css" href="{%static "css/main.css" %}">
-
-</head>
-
-<body>
-    <header id="header">
-        <div class="inner">
-            <a href="/" class="logo">動物園鴨鴨<span style="font-size:15px;">  動物園公開資訊搜尋引擎</span></a>
-        </div>
-    </header>
-
+{%extends 'base.html'%}
+    {%block content%}
+    {%include 'base_search.html'%}
+    {%load static%}
     <div id="login_form">
         <form action="" method="POST" > {% csrf_token %}
             <h2>登入</h2>
@@ -34,4 +22,4 @@
             <p>帳號或密碼錯誤，請重新輸入</p>
         {% endif %}
     </div>
-</body>
+    {%endblock%}

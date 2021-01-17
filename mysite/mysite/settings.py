@@ -127,3 +127,11 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     # another directory ...
 ]   
+
+
+IMAGES_URL = '/images/'
+
+IMAGEFILES_DIRS = [
+    os.path.join(BASE_DIR, "images"),
+    # another directory ...
+]   
