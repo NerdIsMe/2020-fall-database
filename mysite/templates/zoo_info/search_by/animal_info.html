@@ -1,9 +1,14 @@
 {% extends 'base.html' %}
-
+{%load static%}
 {% block content %}
 {%include 'base_search.html'%}
-    <div>
-        <h3>{{animal.animal_name}}</h3>
+    <div id="display_format">
+        <h2>{{animal.animal_name}}</h2>
+        
+            {% if animal.image %}
+                <img src="{{ animal.image.url }}" width = 500px height = 375px style="display:block; margin:auto;" >
+                <p> </p>
+            {%endif%}
         <table>
             <tr>
                 <th>學名</th>
@@ -49,8 +54,14 @@
         </table>
 
 
-        <form action="../">
+        <form action="../" method="POST">{%csrf_token%}
             <input type ="button" onclick="history.back()" value="回到上一頁"></input>
+        </form>
+
+        <form method="POST">{%csrf_token%}
+        {%if request.user.is_superuser %}
+            <input type="submit" name='delete' value = '刪除'>  
+        {%endif%}
         </form>
     </div>
 {% endblock %}

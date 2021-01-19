@@ -1,9 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
 {%include 'base_search.html'%}
-<h1>{{individual_animal.name}}</h1>
 
-<div>
+<div id = "display_format">
+    <h2>{{individual_animal.name}}</h2>
+    {% if individual_animal.image %}
+    <img src="{{ individual_animal.image.url }}" width = 500px height = 375px style="display:block; margin:auto;" >
+    <p> </p>
+    {%endif%}
     <table>
         <tr>
             <td>種類</td>

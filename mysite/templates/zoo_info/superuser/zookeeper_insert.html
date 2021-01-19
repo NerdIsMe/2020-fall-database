@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>新增飼育員：</h1>
-    <div>
+{%include 'base_search.html'%}
+    <div id = "insert">
         <form method="POST"> {%csrf_token%}
             <table>
                 <tr>
@@ -14,8 +14,8 @@
                     <td><input type = 'text' name = 'z_name'></td>
                 </tr>
                 <tr>
-                    <th>出生年</th>
-                    <td><input type="number" name = 'z_birth'> 歲</td>
+                    <th>出生年（西元）</th>
+                    <td><input type="number" name = 'z_birth'></td>
                 </tr>
                 <tr>
                     <th>開始服務年（西元）</th>
@@ -28,7 +28,7 @@
                 
             </table>
             <input type ="submit" value="新增">
-            <input type ="button" onclick="history.back()" value="回到上一頁"></input>
+            <input type ="button" onclick="history.back()" value="取消"></input>
         </form>
     </div>
 {% endblock %}

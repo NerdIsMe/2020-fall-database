@@ -3,18 +3,17 @@
 {% block content %}
 {%include 'base_search.html'%}
 {% load subtract %}
-    <div>
+    <div id = "display_format">
         <form>
             <table>
                 <tr>
-                    <td>查詢：</td>
+                    <td>查詢氣候：</td>
                     <td><input type="text" required name = 'habitat_name'></td>
                     <td><input type ="submit" value="查詢"></td>
                 </tr>
             </table>
         </form>
-    </div>
-    <div>
+
         <table>
             <tr>
                 <th>分布大洲</th>

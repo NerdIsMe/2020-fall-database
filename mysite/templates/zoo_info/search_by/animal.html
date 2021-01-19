@@ -2,18 +2,19 @@
 
 {% block content %}
 {%include 'base_search.html'%}
-    <div>
+    <div id="display_format">
         <form>
             <table>
                 <tr>
                     <td>動物物名稱：</td>
                     <td><input type="text" required name = 'animal_name'></td>
                     <td><input type ="submit" value="查詢"></td>
+                    {%if request.user.is_superuser%}
+                    <td><input type="button" value="新增動物" onclick="location.href='./insert/'"></td>
+                    {%endif%}
                 </tr>
             </table>
         </form>
-    </div>
-    <div>
         <table>
             <tr>
                 <th>名字</th>

@@ -2,10 +2,7 @@
 
 {% block content %}
 {%include 'base_search.html'%}
-    <div>
-        <H1>{{area.theme}}</H1>
-    </div>
-    <div>
+    <div id = "display_format">
         <h3>動物：</h3>
         <table>
             <tr>
@@ -28,6 +25,10 @@
         
         <h3>服務設施：</h3>
         <table>
+            <colgroup>
+                <col style="width:10em">
+                <col style="width:10em">
+              </colgroup> 
             <tr>
                 <th>服務類別</th>
                 <th>名稱</th>

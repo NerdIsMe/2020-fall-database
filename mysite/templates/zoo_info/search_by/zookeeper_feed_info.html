@@ -2,10 +2,9 @@
 {% block content %}
 {%include 'base_search.html'%}
 {% load subtract %}
-    <div>
-        <H1>飼育員 {{zookeeper.name}}</H1>
-    </div>
-    <div>
+    <div id = "display_format">
+        <H2>飼育員 {{zookeeper.name}}</H2>
+
         <table>
             <tr>
                 <th>員工編號</th>
@@ -55,8 +54,8 @@
             {%endif%}
         </table>
 
-        <form action="../">
-            <input type ="button" onclick="history.back()" value="回到上一頁"></input>
+        <form>
+            <input type ="button" onclick="location.href='../'" value="回到上一頁"></input>
         </form>
     </div>
 {% endblock %}

@@ -3,7 +3,7 @@
 {% block content %}
 {%include 'base_search.html'%}
 {% load subtract %}
-    <div>
+    <div id = "display_format">
         <form>
             <table>
                 <tr>
@@ -13,9 +13,15 @@
                 </tr>
             </table>
         </form>
-    </div>
-    <div>
         <table>
+            <colgroup>
+                <col style="width:10%">
+                <col style="width:25%">
+                <col style="width:20%">
+                <col style="width:20%">
+                <col style="width:10%">
+                <col style="width:15%">
+              </colgroup>  
             <tr>
                 <th>園區代碼</th>
                 <th>園區主題</th>

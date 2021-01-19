@@ -49,12 +49,14 @@ class Animal(models.Model):
     conservation = models.CharField(max_length = 30)
     h_id = models.ForeignKey(Habitat, on_delete = models.CASCADE)
     area_id = models.ForeignKey(Area, on_delete = models.CASCADE)
+    image = models.ImageField(blank = True, upload_to = "static/images/zoo_info")
 
 class IndividualAnimal(models.Model):
     name = models.CharField(max_length = 30)
     age = models.IntegerField()
     year_in = models.IntegerField()
     animal_id = models.ForeignKey(Animal, on_delete = models.CASCADE)
+    image = models.ImageField(blank = True, upload_to = "static/images/zoo_info")
 
 class Dependent(models.Model):
     name = models.CharField(max_length = 30)

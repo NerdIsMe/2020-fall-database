@@ -1,6 +1,6 @@
 from django.contrib import admin
 # Register your models here.
-from .models import UserData, Zoo, Area, Habitat, Zookeeper
+from .models import UserData, Zoo, Area, Habitat, Zookeeper, Animal, IndividualAnimal
 
 class UserDataAdmin(admin.ModelAdmin):
     list_display = ('name', 'gender', 'user_id')
@@ -18,9 +18,15 @@ class ZookeeperAdmin(admin.ModelAdmin):
     #list_filter = ('number_of_visitors', 'number_of_categories')
 
 class AnimalAdmin(admin.ModelAdmin):
-    list_display = ('scientific_id', 'animal_name', 'category')#, 'conservation')
+    list_display = ('animal_name', 'scientific_id', 'category')#, 'conservation')
+    search_fields = (['animal_name'])
+
+class IndividualAnimalAdmin(admin.ModelAdmin):
+    list_display = ('name', 'animal_id')#, 'conservation')
+    search_fields = (['name'])
 
 admin.site.register(UserData, UserDataAdmin)
 admin.site.register(Zoo, ZooAdmin)
 admin.site.register(Zookeeper, ZookeeperAdmin)
-#admin.site.register(Animal, AnimalAdmin)
+admin.site.register(Animal, AnimalAdmin)
+admin.site.register(IndividualAnimal, IndividualAnimalAdmin)

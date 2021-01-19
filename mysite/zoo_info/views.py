@@ -58,9 +58,11 @@ def zoo_list(request):
 
 # search
 def search_menu(request):
+    title = '資料查詢'
     return render(request, 'zoo_info/search_menu.html', locals())
 
 def search_animal(request):
+    title = '動物檢索'
     if 'animal_name' in request.GET:
         animal_name = request.GET['animal_name']
         animal_info = Animal.objects.filter(animal_name__contains = animal_name)
@@ -70,7 +72,11 @@ def search_animal(request):
 
 def animal_info(request, animal_id):
     animal = Animal.objects.get(animal_id = animal_id)
-    feed = Feed.objects.get(animal_id = animal_id)
+    feed = Feed.objects.filter(animal_id = animal_id).first()
+    if 'delete' in request.POST:
+        animal.delete()
+        return HttpResponseRedirect('../')
+
     return render(request, 'zoo_info/search_by/animal_info.html', locals())
 
 def individual_animal(request, individual_id):
@@ -78,6 +84,7 @@ def individual_animal(request, individual_id):
     return render(request, 'zoo_info/search_by/individual_animal.html', locals())
 
 def search_zookeeper(request):
+    title = '飼育員查詢'
     current_year = 2021
     if 'zookeeper_name' in request.GET:
         zookeeper_name = request.GET['zookeeper_name']
@@ -90,9 +97,11 @@ def zookeeper_feed_info(request, keeper_id):
     current_year = 2021
     zookeeper = Zookeeper.objects.get(keeper_id = keeper_id)
     feeds = Feed.objects.filter(keeper_id = zookeeper)
+
     return render(request, 'zoo_info/search_by/zookeeper_feed_info.html', locals())
 
 def search_area(request):
+    title = '園區主題'
     if 'area_name' in request.GET:
         area_name = request.GET['area_name']
         area_info = Area.objects.filter(theme__contains = area_name)
@@ -102,6 +111,7 @@ def search_area(request):
 
 def area_info(request, area_id):
     area = Area.objects.get(area_id = area_id)
+    title = area.theme
     animal_info = Animal.objects.filter(area_id = area)
     facilities = Facility.objects.filter(area_id = area)
     return render(request, 'zoo_info/search_by/area_info.html', locals())
@@ -125,6 +135,7 @@ def search_habitat(request):
 # super user
 @login_required
 def superuser_zookeeper_insert(request):
+    title = "新增飼育員"
     if not request.user.is_superuser:
         return HttpResponseRedirect('/home/')
     
@@ -157,6 +168,7 @@ def superuser_zookeeper_modify_personal_info(request, keeper_id):
 
 @user_passes_test(lambda u: u.is_superuser)
 def superuser_zookeeper_modify_animal(request, keeper_id):
+    title = "新增/移除 負責動物"
     the_zookeeper = Zookeeper.objects.get(keeper_id = keeper_id)
     feeds = Feed.objects.filter(keeper_id = keeper_id)
 
@@ -179,3 +191,23 @@ def superuser_zookeeper_modify_animal(request, keeper_id):
                 return HttpResponseRedirect('./')
         
     return render(request, 'zoo_info/superuser/zookeeper_modify_animal.html', locals())
+
+
+
+@user_passes_test(lambda u: u.is_superuser)
+def superuser_animal_insert(request):
+    title = "新增動物"
+
+    if 'a_id' in request.POST:
+        new_animal = Animal()
+        new_animal.animal_id = int(request.POST['an_id'])
+        new_animal.scientific_id = request.POST['sci_id']
+        new_animal.animal_name = (request.POST['name'])
+        new_animal.category = (request.POST['category'])
+        new_animal.conservation = (request.POST['conservation'])
+        new_animal.h_id = Habitat.objects.get(H_id = request.POST['h_id'])
+        new_animal.area_id = Area.objects.get(area_id = request.POST['a_id'])
+        new_animal.save()
+        return HttpResponseRedirect('../')
+
+    return render(request, 'zoo_info/superuser/animal_insert.html', locals())

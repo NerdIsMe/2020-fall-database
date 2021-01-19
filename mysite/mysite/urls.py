@@ -40,4 +40,5 @@ urlpatterns = [
     path('search/zookeeper/insert/', superuser_zookeeper_insert),
     path('search/zookeeper/<int:keeper_id>/modify_personal_info/', superuser_zookeeper_modify_personal_info),
     path('search/zookeeper/<int:keeper_id>/modify_animal/', superuser_zookeeper_modify_animal),
+    path('search/animal/insert/', superuser_animal_insert),
 ]
